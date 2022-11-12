@@ -2,7 +2,7 @@
 
 在upmem中实现skiplist数据结构。
 
-<img src="https://user-images.githubusercontent.com/83715643/188350201-0fce7b2d-df4a-4d9d-8ac9-a3b00d11e02d.png" alt="image-20220905103607298" style="zoom: 67%;" />
+<img src="https://user-images.githubusercontent.com/83715643/188350201-0fce7b2d-df4a-4d9d-8ac9-a3b00d11e02d.png" alt="image-20220905103607298"  />
 
 # Environment
 
@@ -29,3 +29,7 @@ make
 ./build/host_app
 ```
 
+# Improvement
+
+- mram allocator 设计过于简单，仅仅可以分配内存，不可以释放内存，需要设计动态内存分配器。
+- dpu仅仅使用了单线程，每个DPU可用24线程，其实需要12线程以上才能拉满性能
